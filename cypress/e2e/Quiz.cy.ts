@@ -1,5 +1,4 @@
-import { mockState } from '../support/utils/helpers';
-import { Responses } from '../support/types';
+import questions from "../fixtures/questions.json";
 
 describe('Word Guess Game Cycle', () => {
   context('Game Setup', () => {
@@ -7,7 +6,7 @@ describe('Word Guess Game Cycle', () => {
       // Stub the API request for starting the game
       cy.intercept('GET', '/api/game/start', {
         statusCode: 200,
-        body: mockState, // Using the mocked guess data
+        body: questions, // Using the mocked guess data
       }).as('getRandomWord');
 
       // Visit the game page
@@ -19,7 +18,7 @@ describe('Word Guess Game Cycle', () => {
       cy.wait('@getRandomWord').its('response.statusCode').should('eq', 200);
 
       // Check if the masked word is rendered on the page
-      cy.get('[data-cy="masked-word"]').should('contain', mockState.maskedWord);
+      cy.get('[data-cy="masked-word"]').should('contain', questions.maskedWord);
     });
   });
 
@@ -28,7 +27,7 @@ describe('Word Guess Game Cycle', () => {
       // Stub the API request for starting the game
       cy.intercept('GET', '/api/game/start', {
         statusCode: 200,
-        body: mockState, // Using the mocked guess data
+        body: questions, // Using the mocked guess data
       }).as('getRandomWord');
 
       // Mapping object to handle responses based on guessed letters
@@ -38,7 +37,7 @@ describe('Word Guess Game Cycle', () => {
           isComplete: false,
           isCorrect: true,
           isWinner: false,
-          solution: mockState.solution,
+          solution: questions.solution,
           guessesRemaining: 9,
         },
         e: {
@@ -46,7 +45,7 @@ describe('Word Guess Game Cycle', () => {
           isComplete: false,
           isCorrect: true,
           isWinner: false,
-          solution: mockState.solution,
+          solution: questions.solution,
           guessesRemaining: 9,
         },
         s: {
@@ -54,7 +53,7 @@ describe('Word Guess Game Cycle', () => {
           isComplete: true,
           isCorrect: true,
           isWinner: true,
-          solution: mockState.solution,
+          solution: questions.solution,
           guessesRemaining: 9,
         },
         a: {
@@ -62,13 +61,13 @@ describe('Word Guess Game Cycle', () => {
           isComplete: true,
           isCorrect: false,
           isWinner: false,
-          solution: mockState.solution,
+          solution: questions.solution,
           guessesRemaining: 0,
         },
       };
 
       // Stub the API request for guessing a letter
-      cy.intercept('POST', `/api/game/${mockState.id}/guess`, (req) => {
+      cy.intercept('POST', `/api/game/${questions.id}/guess`, (req) => {
         const letter: string = req.body.letter.toLowerCase();
         const response = responses[letter];
 
@@ -153,18 +152,18 @@ describe('Word Guess Game Cycle', () => {
       // Stub the API request for starting the game
       cy.intercept('GET', '/api/game/start', {
         statusCode: 200,
-        body: mockState, // Using the mocked guess data
+        body: questions, // Using the mocked guess data
       }).as('getRandomWord');
 
       // Stub the API request for guessing a letter
-      cy.intercept('POST', `/api/game/${mockState.id}/guess`, {
+      cy.intercept('POST', `/api/game/${questions.id}/guess`, {
         statusCode: 200,
         body: {
           maskedWord: 'Test',
           isComplete: true,
           isCorrect: true,
           isWinner: true,
-          solution: mockState.solution,
+          solution: questions.solution,
           guessesRemaining: 6,
         },
       }).as('guessLetter');

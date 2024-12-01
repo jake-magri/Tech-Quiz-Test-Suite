@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What is the output of print(2 ** 3)?",
+    "answers": [
+      { "text": "6", "isCorrect": false },
+      { "text": "8", "isCorrect": true },
+      { "text": "9", "isCorrect": false },
+      { "text": "12", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following is a mutable data type in Python?",
+    "answers": [
+      { "text": "str", "isCorrect": false },
+      { "text": "tuple", "isCorrect": false },
+      { "text": "list", "isCorrect": true },
+      { "text": "int", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is the keyword used to define a function in Python?",
+    "answers": [
+      { "text": "function", "isCorrect": false },
+      { "text": "func", "isCorrect": false },
+      { "text": "def", "isCorrect": true },
+      { "text": "define", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which method is used to remove whitespace from the beginning and end of a string?",
+    "answers": [
+      { "text": "strip()", "isCorrect": true },
+      { "text": "trim()", "isCorrect": false },
+      { "text": "clean()", "isCorrect": false },
+      { "text": "remove()", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does the // operator do in Python?",
+    "answers": [
+      { "text": "Performs integer division", "isCorrect": true },
+      { "text": "Performs floating-point division", "isCorrect": false },
+      { "text": "Calculates the power of a number", "isCorrect": false },
+      { "text": "Performs a logical AND operation", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following is a valid variable name in Python?",
+    "answers": [
+      { "text": "1_variable", "isCorrect": false },
+      { "text": "variable_1", "isCorrect": true },
+      { "text": "variable-1", "isCorrect": false },
+      { "text": "variable 1", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is the output of type(3.14)?",
+    "answers": [
+      { "text": "<class 'int'>", "isCorrect": false },
+      { "text": "<class 'float'>", "isCorrect": true },
+      { "text": "<class 'complex'>", "isCorrect": false },
+      { "text": "<class 'decimal'>", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following statements is used to handle exceptions in Python?",
+    "answers": [
+      { "text": "catch", "isCorrect": false },
+      { "text": "except", "isCorrect": true },
+      { "text": "handle", "isCorrect": false },
+      { "text": "try", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is the output of 'hello' + 'world'?",
+    "answers": [
+      { "text": "hello world", "isCorrect": false },
+      { "text": "helloworld", "isCorrect": true },
+      { "text": "hello+world", "isCorrect": false },
+      { "text": "hello world!", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does the method append() do in a list?",
+    "answers": [
+      { "text": "Adds a new element at the end of the list", "isCorrect": true },
+      { "text": "Removes the last element of the list", "isCorrect": false },
+      { "text": "Sorts the list in ascending order", "isCorrect": false },
+      { "text": "Removes all elements from the list", "isCorrect": false }
+    ]
+  }
+]
