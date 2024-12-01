@@ -1,4 +1,3 @@
-import React from 'react';
 import Quiz from '../../client/src/components/Quiz.tsx';
 import { mount } from 'cypress/react18';
 import '@testing-library/cypress/add-commands';
