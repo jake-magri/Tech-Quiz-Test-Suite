@@ -1,145 +1,77 @@
-# 19 Testing: Tech Quiz Test Suite
+# Testing: Tech Quiz Test Suite
+![License](https://img.shields.io/badge/MIT%20License-purple)
 
-## Your Task
+## Description
 
-Your assignment this week underscores the importance of ensuring reliability and robustness in modern web applications through comprehensive testing. In today's dynamic development environment, testing is not just an afterthought but a critical part of the development process that ensures applications meet user demands and perform efficiently under various conditions.
+This project aims to enhance a fully functioning Tech Quiz application by implementing Cypress for both component and end-to-end testing. The app, built using the MERN stack, allows users to take a tech quiz consisting of random questions. The objective of this project is to ensure the robustness of the application through automated testing, validating the functionality of the quiz, and ensuring consistent performance during user interactions.
 
-This week, you'll take the starter codebase of a fully functioning Tech Quiz application and enhance it by adding Cypress for both component and end-to-end tests. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. It allows users to take a quiz of ten random questions and view their final score.
+## Table of Contents
 
-To complete the assignment, you’ll need to do the following:
+- [Installation](#installation)
+- [Usage](#usage)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-1. Install Cypress as a dev dependency
+## Installation
 
-2. Configure Cypress for both component and end-to-end testing
+1. Clone the repository:
+    ```
+    git clone <repository-url>
+    ```
 
-3. Create a component test for the quiz component
+2. Navigate to the project directory:
+    ```
+    cd <project-directory>
+    ```
 
-4. Create an end-to-test for the quiz component
+3. Install dependencies using npm:
+    ```
+    npm install
+    ```
 
-## User Story
+4. Set up environment variables for the server by renaming .env.example to .env:
+    ```
+    mv .env.example .env
+    ```
 
-```md
-AS AN aspiring developer
-I WANT to take a tech quiz
-SO THAT I can test my knowledge and improve my skills
-```
+5. Start the application:
+    ```
+    npm start
+    ```
 
-## Acceptance Criteria
+6. Run Cypress tests (component and end-to-end tests):
+    ```
+    npm run test
+    ```
 
-```md
-GIVEN I am taking a tech quiz
-WHEN I click the start button
-THEN the quiz starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN all questions are answered
-THEN the quiz is over
-WHEN the quiz is over
-THEN I can view my score
-WHEN the quiz is over
-THEN I can start a new quiz
-```
+## Usage
 
-## Mock-Up
+### Video Demo
+![Video demo of application.](assets/videos/Video Demo)
 
-The following animation demonstrates the application functionality:
+### Usage Information
+Once the application is running, open it in your browser to access the quiz. The user can start the quiz by clicking the "Start Quiz" button, answer each question, and at the end of the quiz, view their score. Additionally, Cypress tests can be run via the command line to ensure the functionality of the application.
 
-![A GIF demonstrates a functioning quiz.](./Assets/19-testing-homework-demo.gif)
+## How to Contribute
 
-## Getting Started
+1. Fork the repository and create a new branch for your feature.
+2. Ensure that all changes are tested locally using Cypress before submitting a pull request.
+3. Follow the existing code style and naming conventions.
+4. Write meaningful commit messages that clearly describe the purpose of the changes.
+5. Ensure that your code passes all tests before submitting a pull request.
 
-This Challenge combines many of the skills we've covered so far. In addition to the user story and acceptance criteria, we’ve provided some guidelines to help you get started.
+## Tests
 
-Because this Challenge requires a video submission, refer to the [Full-Stack Blog video submission guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for guidance on creating and sharing a video.
+To run tests, use the following command:
+    ```npm run test```
+This command will trigger both the component and end-to-end tests for the application. The Cypress test suite will run and provide feedback on the test results in the terminal.
 
-**Important**: You won't need to modify code for the existing application. In this challenge, you'll only be creating tests for the existing application.
+## License 
+This application is covered under MIT License.
+See the [full license](https://opensource.org/licenses/MIT) for more information.
 
-Your testing should use [Cypress](https://docs.cypress.io/guides/overview/why-cypress) to run both the component tests and the end-to-end tests. The testing will be invoked using the following command:
+## Questions
 
-```bash
-npm run test
-```
-
-It's recommended that you start with a directory structure that looks like the following example:
-
-```md
-.
-├── client/                 // the client application
-├── cypress/                // Folder for Cypress
-    ├── component/          // Folder for component tests
-        └── Quiz.cy.jsx     // Component tests for the Quiz component
-    ├── e2e/                // Folder for end-to-end tests
-        └── quiz.cy.js      // End-to-end tests for the Tech Quiz
-    ├── fixtures/           // Folder for test fixtures
-        └── questions.json  // Mock data for testing
-    └── tsconfig.json
-├── server/                 // the server application
-├── .gitignore
-├── cypress.config.ts       // Runs the application using imports from lib/
-├── package.json
-├── tsconfig.json
-└── README.md              // App description, link to video, setup and usage instructions           
-```
-
-**Note**: The server for this application requires environment variables to function properly. You'll need to rename the `.env.example` file to `.env`.
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it's considered incomplete and won't count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Deliverables: 15%
-
-* Your GitHub repository must contain the application code as well as the configuration and tests using Cypress.
-
-### Walkthrough Video: 32%
-
-* A walkthrough video that demonstrates the component and end-to-end tests running and passing must be submitted.
-
-* The `README.md` file must include a link to the walkthrough video.
-
-* The walkthrough video must show all tests passing from the command line.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-### Technical Acceptance Criteria: 40%
-
-* Your submission should satisfy all of the preceding acceptance criteria in addition to the following:
-
-  * You must use the [Cypress package](https://www.npmjs.com/package/cypress).
-
-  * The application must have a component test for the quiz component.
-
-  * The application must have an end-to-end test for the quiz component.
-
-### Repository Quality: 13%
-
-* Your repository has a unique name.
-
-* Your repository follows the best practices for file structure and naming conventions.
-
-* Your repository follows the best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Your repository contains multiple descriptive commit messages.
-
-* Your repository contains a high-quality README with a description and a link to your walkthrough video.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application and the application successfully passing tests.
-
-* The URL of your GitHub repository, which should have a unique name and include a README describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+To reach me with additional questions please message me on either GitHub at jake-magri or via email jake.magri2@gmail.com.

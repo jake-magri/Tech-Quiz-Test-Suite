@@ -5,11 +5,11 @@
     "lib": ["ES2020", "DOM"],
     "types": ["cypress", "node", "@testing-library/cypress"],
     "isolatedModules": false,
-    "noEmit": true,
     "allowImportingTsExtensions": true,
+    "noEmit": true,
     "composite": true,
     "jsx": "react-jsx",
     "strict": true
   },
-  "include": ["../client/src/components/**/*.tsx","**/*.tsx", "**/*.ts", "**/*.js", "**/*.jsx"]
+  "include": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.jsx", "../client/src/**/*.tsx"]
 }
