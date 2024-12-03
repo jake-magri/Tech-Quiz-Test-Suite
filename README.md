@@ -1,4 +1,4 @@
-# Testing: Tech Quiz Test Suite
+# Tech Quiz Test Suite
 ![License](https://img.shields.io/badge/MIT%20License-purple)
 
 ## Description
@@ -49,7 +49,7 @@ This project aims to enhance a fully functioning Tech Quiz application by implem
 ## Usage
 
 ### Video Demo
-![Video demo of application.](assets/videos/Video Demo)
+https://github.com/user-attachments/assets/98f2953e-2f2a-436b-a992-3783c3527f72
 
 ### Usage Information
 Once the application is running, open it in your browser to access the quiz. The user can start the quiz by clicking the "Start Quiz" button, answer each question, and at the end of the quiz, view their score. Additionally, Cypress tests can be run via the command line to ensure the functionality of the application.
